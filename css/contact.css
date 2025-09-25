@@ -1,0 +1,297 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+header {
+	background: linear-gradient(to right, #4411BD, #06064F, #4411BD);
+	color: white;
+	position: sticky;/*grade le header a position fixe*/
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	z-index: 1000;/*le place au dessus de tout elemnets*/
+	
+}
+
+.tour {
+	display: none;
+}
+
+header>* {
+	position: absolute;
+	top : 50px;
+	transform: translateY(-50%);
+	margin: 0 30px;
+}
+
+header img {
+	width: 80px;
+	height: 80px;
+	border-radius: 100px; 
+}
+
+header ul {
+	text-decoration: none;
+	font-weight: 600;
+	list-style: none;
+	right: 0px;
+	overflow: hidden;
+}
+
+#tete>li a {
+	text-decoration: none;
+}
+
+header>ul li {
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	transition: background-color 0.5s ease-in-out;
+	display: inline-block;
+	
+}
+
+header>ul li:hover {
+	background-color: #110232;
+}
+
+header a {
+	color: white;
+}
+
+header li {
+	float: none;
+}
+
+header h1 {
+	margin-left: 120px;
+	font-weight: blod;
+	font-size: 30px;
+	
+}
+
+.tour :not(a[class="bar-icon"]) {
+	background: linear-gradient(to right, #4411BD, #06064F, #4411BD);
+	overflow: hidden;
+}
+
+.tour a {
+	float: right;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+}
+
+.tour a:hover {
+	background-color: #110232;
+
+}
+
+.tour .bar-icon {
+	display: none;
+}
+
+.main-page {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to left, #06064F, #4411BD, #06064F);
+	color: white;
+}
+
+
+input:not(input[type="submit"]) , textarea {
+	border: none;
+	border-bottom: 2px  solid white;
+	resize: none;
+	outline: none;
+	margin-bottom: 20px;
+	width: 30vw;
+	font-size: 20px;
+	background-color: #6254B0;
+	color: white;
+}
+
+
+input:not(input[type="submit"]):hover , textarea:hover {
+	border-bottom: 2px solid black;
+	transform: translateY(-5px);
+}
+
+
+label {
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+}
+
+.form-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+
+.form-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.form-left>div * {
+	display: block;
+}
+.form-right * {
+	display: block;
+}
+
+.form-button input {
+	background: linear-gradient(to right, #4411BD, #06064F, #4411BD);
+	border: none;
+	border-radius:  20px;
+	font-weight: 600;
+	font-family: sans-serif;
+	color: white;
+	font-size: 20px;
+	margin: 30px auto;
+	width: 80%;
+	
+}
+
+.form-button {
+	left: 50%;
+	margin: 0 auto;
+}
+
+.form-button input:hover {
+
+}
+
+footer {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to right, #4411BD, #06064F, #4411BD);
+	color: white;
+	position: relative;
+	height: 200px;
+	justify-content: space-between;
+	
+	
+}
+
+.foot-top {
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.foot-left>.autres * {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.autres>p a {
+	text-decoration: none;
+}
+
+.foot-right>.social-icons a {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.separateur {
+	height: 2px;
+	background-color: black;
+	margin: 0 auto;
+	width: 80%;
+	
+	
+}
+
+.foot-down p {
+	font-size: 20px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+
+
+
+ @media screen and (max-width: 1000px) {
+	#tete {
+		display: none;
+	}
+
+	.tour {
+		display: flex;
+		flex-direction: column;
+		right: 10px;
+	}
+
+	.tour a {
+		display: none;
+		
+	}
+
+	.tour a.bar-icon {
+		float: right;
+		display: block;
+	}
+
+	.tour.responsive {
+		position: relative;
+	}
+
+	.tour.responsive .bar-icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.tour.responsive a {
+		float:none;
+		display: block;
+		text-align: right;
+	}
+
+	.form-contact {
+		
+	}
+    
+    .form-top {
+        flex-direction: column;
+        width: 100%;
+		
+    }
+
+	footer {
+		height: 300px;
+	}
+
+	.foot-top {
+        flex-direction: column;
+        width: 100%;
+		font-size: 14px;
+    }
+    
+	.foot-top img {
+		width: 20px;
+	}
+
+	.social-icons>a span {
+		display: none;
+	}
+
+	.foot-down p {
+		font-size: 14px;
+		
+	}
+}
